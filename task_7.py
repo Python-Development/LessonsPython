@@ -1,4 +1,4 @@
-# Пірамідка Маріо
+# Пірамідка маріо
 
 height = 8
 print('height', height)
