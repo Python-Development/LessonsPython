@@ -1,19 +1,10 @@
 # Пірамідка Маріо
 
-stepsOfThePyramid = (
-    '##',
-    '###',
-    '####',
-    '#####',
-    '######',
-    '#######',
-    '########',
-    '#########'
-)
-print('height:', len(stepsOfThePyramid))
-
-mario = 0
-
-while mario != len(stepsOfThePyramid):
-    print(stepsOfThePyramid[mario].rjust(9))
-    mario += 1
+height = 8
+print('height', height)
+for i in range(height):
+    x = height - i
+    for j in range(i + 2):
+        print('#'.rjust(x), end='')
+        x = 0
+    print('')
