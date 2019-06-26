@@ -21,10 +21,8 @@ def speller():
                     file.write('MISSPELLED WORDS:\n\n')
                     counter = []
                     for i in text:
-                        if i.lower() not in dictionary and i.lower() != '':
-                            file.write(i + '\n')
-                        if i.lower() not in dictionary and i.lower() != '':
-                            counter.append(i)
+                        file.write(i + '\n' if i.lower() not in dictionary and i.lower() != '' else '')
+                        counter.append(i) if i.lower() not in dictionary and i.lower() != '' else ''
                     file.write(f'\nWORDS MISSPELLED:     {len(counter)}\n')
                     file.write(f'WORDS IN DICTIONARY:  {len(dictionary)}\n')
                     file.write(f"WORDS IN TEXT:        {len(text1.split())}")
