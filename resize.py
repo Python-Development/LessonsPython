@@ -31,9 +31,9 @@ def resize():
             skip_bytes = 4 - (width[0] * px) % 4
 
             x1 = off_set_bits[0]
-            x2 = off_set_bits[0] + int(bit_count[0] / 8)
+            x2 = off_set_bits[0] + px
             y1 = off_set_bits[0]
-            y2 = off_set_bits[0] + int(bit_count[0] / 8)
+            y2 = off_set_bits[0] + px
 
             size_image = (((width[0] * increasing * px) + add_bytes) * (abs(height[0]) * increasing)
                           if multiplicity_by_4 != 0 else width[0] * increasing * px * (abs(height[0]) * increasing))
