@@ -29,5 +29,5 @@ def speller():
                     break
 
 
-print(speller())
-
+if __name__ == '__main__':
+    speller()
